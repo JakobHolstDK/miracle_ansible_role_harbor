@@ -3,3 +3,5 @@
   apt:
     name: wget
     update_cache: yes
+  become: True
+  
