@@ -1,0 +1,13 @@
+- name: miracle_ansible_role | consul | Ensure consul.d exists"
+  file:
+    path: /etc/consul.d
+    state: directory
+
+- name: "miracle_ansible_role | consul| create consul.hcl"
+  ansible.builtin.template:
+    src: consul.hcl.j2
+    dest: /etc/consul.d/consul.hcl
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r
+

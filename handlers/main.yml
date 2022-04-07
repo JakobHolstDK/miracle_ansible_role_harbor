@@ -1,0 +1,6 @@
+---
+# Handler to start chosen display manager
+- name: Miracle ansible role handler
+  service:
+    name: "{{ miracle_service }}"
+    state: restarted

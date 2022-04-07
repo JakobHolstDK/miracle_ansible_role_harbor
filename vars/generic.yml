@@ -1,0 +1,3 @@
+---
+vars:
+    HOST_COUNT: "{{ ansible_play_hosts | length }}"

@@ -1,0 +1,17 @@
+---
+- name: "consul | Set hostname "
+  shell: "hostnamectl set-hostname {{ fqdn }}"
+  become: True
+
+- name: "consul | Set hostname --transient "
+  shell: "hostnamectl --transient set-hostname {{ fqdn }}"
+  become: True
+
+- name: "consul | Register rhel"
+  shell: "subscription-manager register --force --org={{ myorg }} --activationkey={{ mykey }}"
+  become: True
+  ignore_errors: true
+  
+
+
+

@@ -1,0 +1,18 @@
+datacenter = "{{ datacenter }}"
+data_dir = "{{ data_dir }}"
+client_addr = "0.0.0.0"
+ui_config{
+  enabled = true
+}
+server = true
+bind_addr = "0.0.0.0" # Listen on all IPv4
+bootstrap_expect={{ HOST_COUNT }}
+retry_join = ["127.0.0.1:8301"]
+ 
+ca_file = "/etc/consul.d/certs/consul-agent-ca.pem"
+cert_file = "/etc/consul.d/certs/{{ datacenter }}-server-{{ domain }}-{{ certificate_number }}.pem"
+key_file = "/etc/consul.d/certs/{{ datacenter }}-server-{{ domain }}-{{ certificate_number }}-key.pem"
+
+auto_encrypt {
+  allow_tls = true
+}

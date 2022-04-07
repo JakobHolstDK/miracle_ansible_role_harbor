@@ -1,0 +1,9 @@
+---
+# This task installs pre dependencies of xorg
+- name: Install the prereqs
+  apt:
+    name: apt-transport-https, ca-certificates, curl, gnupg-agent, software-properties-common
+    state: present
+  when: ansible_os_family == "Debian"
+
+  
