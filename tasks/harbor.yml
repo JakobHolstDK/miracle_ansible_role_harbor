@@ -2,3 +2,10 @@
 - name: get harbor-online-installer
   get_url: url={{ harbor_online_installer }} dest=/opt/harbor-online-installer.tar.gz
   become: true
+  
+- name: Untar
+  unarchive:
+  src:  /opt/harbor-online-installer.tar.gz
+  dest: /opt
+  become: true
+
