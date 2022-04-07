@@ -1,7 +1,5 @@
 ---
-# This task installs pre dependencies of xorg
 - name: Install the prereqs
-  pkg:
-    name: nmon
-    state: present
-  when: ansible_os_family == "Debian"
+  apt:
+    name: wget
+    update_cache: yes
