@@ -7,4 +7,8 @@
   shell: "cd /opt && tar xvf harbor-online-installer.tar.gz"
   become: true
 
+- name: "run installer"
+  shell: ""
+  become: true
+
 
