@@ -7,6 +7,15 @@
   shell: "cd /opt && tar xvf harbor-online-installer.tar.gz"
   become: true
 
+- name: Template a file to /etc/file.conf
+  ansible.builtin.template:
+    src: harbor.yml.j2
+    dest: /opt/harbor/harbor.yml
+    owner: root
+    group: root
+    mode: '0644'
+  become: True
+  
 - name: "run installer"
   shell: "cd /opt/harbor && ./install.sh"
   become: true

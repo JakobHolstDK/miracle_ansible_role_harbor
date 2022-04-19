@@ -5,14 +5,7 @@
     update_cache: yes
   become: True
 
-- name: Template a file to /etc/file.conf
-  ansible.builtin.template:
-    src: harbor.yml.j2
-    dest: /opt/harbor/harbor.yml
-    owner: root
-    group: root
-    mode: '0644'
-  become: True
+
 
 
 
