@@ -6,7 +6,7 @@
 - name: "Untar"
   unarchive:
     src:  "/opt/harbor-online-installer.tar.gz"
-    dest: "/opt"
+    dest: "/opt/harbor"
   become: true
 
 
