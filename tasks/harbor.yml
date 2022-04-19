@@ -4,7 +4,7 @@
   become: true
   
 - name: "Untar"
-  shell: "cd opt && tar xvf harbor-online-installer.tar.gz"
+  shell: "cd /opt && tar xvf harbor-online-installer.tar.gz"
   become: true
 
 
