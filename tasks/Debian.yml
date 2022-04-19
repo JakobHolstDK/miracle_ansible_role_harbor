@@ -1,7 +1,7 @@
 ---
 - name: Install the prereqs
   apt:
-    name: wget docker.io docker-compose
+    name:   ['wget', 'docker.io', 'docker-compose' ]
     update_cache: yes
   become: True
 
