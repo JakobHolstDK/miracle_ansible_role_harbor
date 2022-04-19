@@ -8,7 +8,7 @@
 - name: Template a file to /etc/file.conf
   ansible.builtin.template:
     src: harbor.yml.j2
-    dest: /etc/harbor.yml
+    dest: /opt/harbor/harbor.yml
     owner: root
     group: root
     mode: '0644'
