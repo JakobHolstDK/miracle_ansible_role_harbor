@@ -4,9 +4,7 @@
   become: true
   
 - name: "Untar"
-  unarchive:
-    src:  "/opt/harbor-online-installer.tar.gz"
-    dest: "/opt/harbor"
+  shell: "cd opt && tar xvf harbor-online-installer.tar.gz"
   become: true
 
 
